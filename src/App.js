@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
@@ -27,13 +28,6 @@ function App() {
   };
   return (
     <div className="App">
-      {/* <Router>
-        <Routes>
-          <Route path="/" element={<Main />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/raises" element={<Heveview />} />
-        </Routes>
-      </Router> */}
       <Router>
       {isLoggedIn ? <Main isLoggedIn={isLoggedIn} onLogout={handleLogout} /> : null}
       <Routes>

@@ -1,10 +1,11 @@
 import React from 'react'
-import QAComponent from './heve/QAComponent'
+
+import ImageSlider from './main/ImageSlider'
 
 const Home = () => {
   return (
-    <div>Home
-     
+    <div style={{margin:0}}>
+     <ImageSlider/>
     </div>
   )
 }

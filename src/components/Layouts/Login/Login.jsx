@@ -95,7 +95,7 @@ const Login = ({ onLoginSuccess }) => {
           >
             {/* You can replace the image source with your own */}
             <img
-              src="https://wallpapercave.com/wp/wp2508260.jpg" // Adjust the image source
+              src="https://images.unsplash.com/photo-1578357078586-491adf1aa5ba?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aGVscGluZyUyMGhhbmR8ZW58MHx8MHx8fDA%3D" // Adjust the image source
               alt="Admin Panel"
               style={{ width: '100%', height: '100%', objectFit: 'cover' }}
             />

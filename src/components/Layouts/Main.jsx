@@ -1,3 +1,4 @@
+
 import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -13,7 +14,7 @@ import DragHandleIcon from '@mui/icons-material/DragHandle';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import { Link as RouterLink } from 'react-router-dom';
+import {Link as RouterLink } from 'react-router-dom';
 import Home from './Home';
 
 import { InputAdornment, TextField } from '@mui/material';
@@ -24,7 +25,7 @@ const drawerWidth = 240;
 const navItems = ['Home', 'Raises', 'Contact'];
 
 export default function Main(props) {
-  const { window } = props;
+  const { window ,onLogout,isLoggedIn} = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
   const handleDrawerToggle = () => {
@@ -104,6 +105,11 @@ export default function Main(props) {
                 {item}
               </Button>
             ))}
+         {isLoggedIn && (
+            <Button color='error' style={{alignItems:'right'}} onClick={onLogout}>Logout</Button>
+          
+        )}
+     
           </Box>
         </Toolbar>
       </AppBar>
@@ -124,7 +130,7 @@ export default function Main(props) {
           {drawer}
         </Drawer>
       </nav>
-      <Box component="main" sx={{ p: 3 }}>
+      <Box component="main" sx={{ p: 3, position: 'relative', flexGrow: 1 }}>
         <Toolbar />
         {/* Content of the component */}
         <Box
@@ -132,6 +138,7 @@ export default function Main(props) {
             position: 'fixed',
             bottom: 16,
             right: 16,
+            zIndex: 9999, // Set a high z-index value
             display: 'flex',
             flexDirection: 'row',
           }}
